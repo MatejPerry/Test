@@ -1,122 +1,42 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
+const menu = [
+  { name: 'Ranní espresso', detail: 'Dvojité espresso, čokoládové tóny', price: '65 Kč' },
+  { name: 'Domácí limonáda', detail: 'Citron, máta a kapka letní pohody', price: '75 Kč' },
+  { name: 'Koláč dne', detail: 'Pečený každé ráno z poctivých surovin', price: '85 Kč' },
+]
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <main className="page">
+      <nav className="nav">
+        <a className="brand" href="#domu"><span className="brand-mark">k</span> kousek</a>
+        <div className="nav-links"><a href="#pribeh">Náš příběh</a><a href="#menu">Menu</a><a className="nav-cta" href="#navsteva">Najdeš nás <span>↗</span></a></div>
+      </nav>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      <section className="hero" id="domu">
+        <div className="hero-copy">
+          <p className="eyebrow"><span /> MALÁ KAVÁRNA · VELKÁ POHODA</p>
+          <h1>Na chvíli<br /><em>jen tak.</em></h1>
+          <p className="intro">Dobrá káva, něco sladkého a místo, kde nikam nemusíš spěchat. Zastav se na svůj malý kousek dne.</p>
+          <a className="button" href="#menu">Ochutnat menu <span>↗</span></a>
+          <div className="hero-note"><span className="note-icon">✳</span><span><strong>Otevřeno každý den</strong><br />8:00 – 18:00 · Praha, Vinohrady</span></div>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+        <div className="hero-art" aria-label="Ilustrace šálku kávy" role="img">
+          <div className="sun" /><div className="art-caption">POMALU<br />A DOBŘE.</div>
+          <div className="steam steam-one" /><div className="steam steam-two" />
+          <div className="cup"><div className="coffee" /><div className="cup-heart">♥</div></div>
+          <div className="saucer" /><div className="sparkle sparkle-one">✳</div><div className="sparkle sparkle-two">✦</div>
+          <div className="art-tag">100 %<br /><small>dobrá nálada</small></div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section className="menu-section" id="menu">
+        <div className="section-heading"><div><p className="eyebrow">MALÉ RADOSTI</p><h2>Dnešní <em>oblíbenci</em></h2></div><p>Výběrová káva a dobroty,<br />které děláme s láskou.</p></div>
+        <div className="menu-list">{menu.map((item, index) => <article className="menu-item" key={item.name}><span className="item-number">0{index + 1}</span><div><h3>{item.name}</h3><p>{item.detail}</p></div><span className="price">{item.price}</span></article>)}</div>
+      </section>
+      <footer id="navsteva"><span className="brand"><span className="brand-mark">k</span> kousek</span><span>Tvůj kousek klidu na Vinohradech.</span><a href="mailto:ahoj@kousek.cz">ahoj@kousek.cz ↗</a></footer>
+    </main>
   )
 }
 
