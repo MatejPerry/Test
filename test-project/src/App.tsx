@@ -18,6 +18,8 @@ function App() {
         <div className="hero-copy">
           <p className="eyebrow"><span /> MALÁ KAVÁRNA · VELKÁ POHODA</p>
           <p className="eyebrow"><span /> MALÁ KAVÁRNA · VELKÁ POHODA</p>
+          <p className="eyebrow"><span /> MALÁ KAVÁRNA · VELKÁ POHODA</p>
+          <p className="eyebrow"><span /> MALÁ KAVÁRNA · VELKÁ POHODA</p>
           <h1>Na chvíli<br /><em>jen tak.</em></h1>
           <p className="intro">Dobrá káva, něco sladkého a místo, kde nikam nemusíš spěchat. Zastav se na svůj malý kousek dne.</p>
           <a className="button" href="#menu">Ochutnat menu <span>↗</span></a>
