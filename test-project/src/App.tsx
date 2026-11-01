@@ -38,10 +38,11 @@ function App() {
             <use href="/icons.svg#documentation-icon"></use>
           </svg>
           <h2>Documentation</h2>
-          <p>Your questions, answered branch main</p>
-          <p>Your questions, answered branch main</p>
-          <p>Your questions, answered branch main</p>
-          <p>Your questions, answered branch main</p>
+          <p>Your questions, answered branch v2</p>
+          <p>Your questions, answered branch v2</p>
+          <p>Your questions, answered branch v2</p>
+          <p>Your questions, answered branch v2</p>
+          <p>Your questions, answered branch v2</p>
           <ul>
             <li>
               <a href="https://vite.dev/" target="_blank">
@@ -62,9 +63,6 @@ function App() {
             <use href="/icons.svg#social-icon"></use>
           </svg>
           <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <p>Join the Vite community</p>
-          <p>Join the Vite community</p>
           <p>Join the Vite community</p>
           <ul>
             <li>
